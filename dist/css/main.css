@@ -18,10 +18,14 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 2rem; }
+  padding: 2rem;
+  flex: 1; }
 
 .hero {
-  height: 100vh; }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
   .hero-content {
     display: grid;
     grid-template-columns: 1fr 0.75fr;
@@ -44,24 +48,23 @@ body {
         line-height: 1.5;
         font-size: 1.1rem;
         margin-bottom: 1rem; }
+      .hero-content > div a {
+        display: inline-block;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+        color: #674baf;
+        text-decoration: none; }
       .hero-content > div .btn {
         background-color: #fff;
         box-shadow: 1px 5px 15px #333;
         border: none;
         border-radius: 30px;
         cursor: pointer;
-        transition: background-color 0.4s; }
+        transition: background-color 0.4s;
+        padding: 1rem 4rem; }
         .hero-content > div .btn:hover {
-          background-color: #e882e8; }
-          .hero-content > div .btn:hover a {
-            color: #fff; }
-        .hero-content > div .btn a {
-          display: inline-block;
-          font-family: "Poppins", sans-serif;
-          font-size: 1.2rem;
-          color: #674baf;
-          text-decoration: none;
-          padding: 1rem 4rem; }
+          background-color: #e882e8;
+          color: #fff; }
   .hero .social {
     display: flex;
     justify-content: flex-end;
