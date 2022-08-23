@@ -6,7 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: url(/dist/images/bg-desktop.svg) no-repeat center center/cover;
+  background: url(../images/bg-desktop.svg) no-repeat center center/cover;
   background-color: #674baf;
   height: 100vh; }
 
@@ -101,7 +101,7 @@ body {
   body {
     background-image: none; }
   .container {
-    background-image: url(/dist/images/bg-mobile.svg);
+    background-image: url(../images/bg-mobile.svg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -123,6 +123,7 @@ body {
       margin-top: 1rem; }
   .hero .social {
     margin-top: 2rem;
+    margin-bottom: 2rem;
     justify-content: center; }
     .hero .social a i {
       font-size: 1rem; } }
