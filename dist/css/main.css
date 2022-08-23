@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url(/dist/images/bg-desktop.svg) no-repeat center center/cover;
+  background-color: #674baf;
+  height: 100vh; }
+
+.container {
+  max-width: 1350px;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem; }
+
+.hero {
+  height: 100vh; }
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    gap: 1rem; }
+    .hero-content img {
+      width: 100%;
+      height: auto;
+      align-self: center; }
+    .hero-content > div {
+      color: #fff;
+      padding: 3rem 0 0 2rem; }
+      .hero-content > div h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        line-height: 1.5;
+        margin-bottom: 1rem; }
+      .hero-content > div p {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        line-height: 1.5;
+        font-size: 1.1rem;
+        margin-bottom: 1rem; }
+      .hero-content > div .btn {
+        background-color: #fff;
+        box-shadow: 1px 5px 15px #333;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.4s; }
+        .hero-content > div .btn:hover {
+          background-color: #e882e8; }
+          .hero-content > div .btn:hover a {
+            color: #fff; }
+        .hero-content > div .btn a {
+          display: inline-block;
+          font-family: "Poppins", sans-serif;
+          font-size: 1.2rem;
+          color: #674baf;
+          text-decoration: none;
+          padding: 1rem 4rem; }
+  .hero .social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem; }
+    .hero .social a {
+      border: 2px #fff solid;
+      color: #fff;
+      border-radius: 50%;
+      transition: all 0.3s; }
+      .hero .social a:hover {
+        color: #e882e8;
+        border-color: #e882e8; }
+      .hero .social a i {
+        font-size: 1.5rem;
+        padding: 0.8rem; }
+
+@media (max-width: 1100px) {
+  .hero-content > div {
+    padding-top: 1rem; }
+    .hero-content > div h1 {
+      font-size: 1.8rem; }
+    .hero-content > div .btn a {
+      font-size: 14px; } }
+
+@media (max-width: 860px) {
+  .hero-content > div {
+    padding-top: 1rem; }
+    .hero-content > div h1 {
+      font-size: 1.4rem; }
+    .hero-content > div p {
+      font-size: 0.9rem; }
+    .hero-content > div .btn a {
+      font-size: 14px;
+      padding: 0.5rem 3rem; } }
+
+@media (max-width: 680px) {
+  body {
+    background-image: none; }
+  .container {
+    background-image: url(/dist/images/bg-mobile.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 100vw;
+    padding: 0.5rem;
+    justify-content: flex-start; }
+  .hero nav img {
+    width: 150px;
+    height: 100px; }
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center; }
+    .hero-content > div {
+      padding: 0; }
+      .hero-content > div p {
+        margin-bottom: 0.5rem;
+        font-size: 16px; }
+    .hero-content .btn {
+      margin-top: 1rem; }
+  .hero .social {
+    margin-top: 2rem;
+    justify-content: center; }
+    .hero .social a i {
+      font-size: 1rem; } }
