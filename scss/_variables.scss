@@ -6,3 +6,12 @@ $open-sans: "Open Sans", sans-serif;
 $normal: 400;
 $semi-bold: 600;
 $max-width: 1350px;
+
+//  Map colors
+$colors: (
+  "primary": $violet,
+  "secondary": $soft-magenta,
+  "white": $white,
+);
+
+@debug map-get($colors, "primary");

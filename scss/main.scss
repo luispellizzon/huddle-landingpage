@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;600&display=swap");
+
 @import "variables";
 
 * {
@@ -10,7 +11,7 @@
 body {
   font-family: $poppins;
   background: url(../images/bg-desktop.svg) no-repeat center center/cover;
-  background-color: $violet;
+  background-color: map-get($colors, "primary");
   height: 100vh;
 }
 
@@ -44,7 +45,7 @@ body {
     }
 
     & > div {
-      color: $white;
+      color: map-get($colors, "white");
       padding: 3rem 0 0 2rem;
 
       h1 {
@@ -66,12 +67,12 @@ body {
         display: inline-block;
         font-family: $poppins;
         font-size: 1.2rem;
-        color: $violet;
+        color: map-get($colors, "primary");
         text-decoration: none;
       }
 
       .btn {
-        background-color: $white;
+        background-color: map-get($colors, "white");
         box-shadow: 1px 5px 15px #333;
         border: none;
         border-radius: 30px;
@@ -80,7 +81,7 @@ body {
         padding: 1rem 4rem;
 
         &:hover {
-          background-color: $soft-magenta;
+          background-color: map-get($colors, "secondary");
           color: $white;
         }
       }
@@ -95,15 +96,15 @@ body {
       font-size: 1.5rem;
       width: 50px;
       height: 50px;
-      border: 2px $white solid;
-      color: $white;
+      border: 2px map-get($colors, "white") solid;
+      color: map-get($colors, "white");
       border-radius: 50%;
       transition: all 0.3s;
       text-align: center;
 
       &:hover {
-        color: $soft-magenta;
-        border-color: $soft-magenta;
+        color: map-get($colors, "secondary");
+        border-color: map-get($colors, "secondary");
       }
       i {
         padding: 0.8rem;
@@ -186,6 +187,7 @@ body {
       margin-top: 2rem;
       margin-bottom: 2rem;
       justify-content: center;
+
       a {
         font-size: 1.5rem;
       }
