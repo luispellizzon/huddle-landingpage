@@ -88,9 +88,7 @@ body {
   .hero-content > div {
     padding-top: 1rem; }
     .hero-content > div h1 {
-      font-size: 1.8rem; }
-    .hero-content > div .btn a {
-      font-size: 14px; } }
+      font-size: 1.8rem; } }
 
 @media (max-width: 860px) {
   .hero-content > div {
@@ -132,4 +130,11 @@ body {
     margin-bottom: 2rem;
     justify-content: center; }
     .hero .social a {
-      font-size: 1.5rem; } }
+      font-size: 1.3rem;
+      width: 50px;
+      height: 50px;
+      border: 2px #fff solid;
+      color: #fff;
+      border-radius: 50%;
+      transition: all 0.3s;
+      text-align: center; } }

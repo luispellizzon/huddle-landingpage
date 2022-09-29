@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins:wght@400;600&display=swap");
 
 @import "variables";
+@import "round-links";
 
 * {
   margin: 0;
@@ -82,7 +83,7 @@ body {
 
         &:hover {
           background-color: map-get($colors, "secondary");
-          color: $white;
+          color: map-get($colors, "white");
         }
       }
     }
@@ -93,14 +94,7 @@ body {
     gap: 1.5rem;
 
     a {
-      font-size: 1.5rem;
-      width: 50px;
-      height: 50px;
-      border: 2px map-get($colors, "white") solid;
-      color: map-get($colors, "white");
-      border-radius: 50%;
-      transition: all 0.3s;
-      text-align: center;
+      @include round-links();
 
       &:hover {
         color: map-get($colors, "secondary");
@@ -119,11 +113,6 @@ body {
       padding-top: 1rem;
       h1 {
         font-size: 1.8rem;
-      }
-      .btn {
-        a {
-          font-size: 14px;
-        }
       }
     }
   }
@@ -189,7 +178,7 @@ body {
       justify-content: center;
 
       a {
-        font-size: 1.5rem;
+        @include round-links(1.3rem);
       }
     }
   }
