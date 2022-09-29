@@ -1,0 +1,9 @@
+@mixin button($padding: 1rem 4rem) {
+  background-color: map-get($colors, "white");
+  box-shadow: 1px 5px 15px #333;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+  padding: $padding;
+}

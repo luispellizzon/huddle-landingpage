@@ -2,6 +2,7 @@
 
 @import "variables";
 @import "round-links";
+@import "button";
 
 * {
   margin: 0;
@@ -16,23 +17,25 @@ body {
   height: 100vh;
 }
 
+.flex-layout-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
+  @extend .flex-layout-column;
   max-width: $max-width;
   margin: 0 auto;
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
   justify-content: space-around;
   padding: 2rem;
   flex: 1;
 }
 
 .hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  min-height: 100%;
+  @extend .flex-layout-column;
 
   &-content {
     display: grid;
@@ -73,13 +76,7 @@ body {
       }
 
       .btn {
-        background-color: map-get($colors, "white");
-        box-shadow: 1px 5px 15px #333;
-        border: none;
-        border-radius: 30px;
-        cursor: pointer;
-        transition: background-color 0.4s;
-        padding: 1rem 4rem;
+        @include button();
 
         &:hover {
           background-color: map-get($colors, "secondary");
@@ -126,13 +123,10 @@ body {
         font-size: 1.4rem;
       }
       p {
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
       .btn {
-        a {
-          font-size: 14px;
-          padding: 0.5rem 3rem;
-        }
+        margin-top: 1rem;
       }
     }
   }
@@ -148,8 +142,9 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     max-width: 100vw;
-    padding: 0.5rem;
+    padding: 1rem;
     justify-content: flex-start;
+    min-height: 100vh;
   }
 
   .hero {
@@ -161,20 +156,30 @@ body {
       grid-template-columns: 1fr;
       text-align: center;
 
+      img {
+        justify-self: center;
+        max-width: 500px;
+      }
+
       & > div {
         padding: 0;
+
+        h1 {
+          font-size: 1.3rem;
+        }
         p {
           margin-bottom: 0.5rem;
-          font-size: 16px;
+          font-size: 1rem;
         }
-      }
-      .btn {
-        margin-top: 1rem;
+        .btn {
+          margin-top: 1rem;
+          font-size: 14px;
+        }
       }
     }
     .social {
       margin-top: 2rem;
-      margin-bottom: 2rem;
+
       justify-content: center;
 
       a {
